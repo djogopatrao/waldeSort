@@ -24,6 +24,18 @@
         console.log(appearing.length)
     })
 
+
+    $('.btn-trocar').click(function(){
+        if ( appearing.length < 2 ) {
+            alert("Escolha dois para trocar!");
+            return;
+        }
+        var tmp = appearing[0].html();
+        appearing[0].html( appearing[1].html() );
+        appearing[1].html( tmp );
+    })
+
+
     $('.btn-ordenado').click(function(){
         var elements = [];
         var isSorted = true;
