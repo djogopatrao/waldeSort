@@ -1,0 +1,11 @@
+.slot {
+    background-color: #ffff00;
+    border: 1px solid black;
+    height: 4em
+}
+
+#sortable>li {
+    border: 1px solid black;
+    height: 4em;
+    margin-bottom: 10px;
+}
