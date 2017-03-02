@@ -1,10 +1,7 @@
 (function() {
 
     var appearing = []
-
-
-    $( "#sortable" ).sortable();
-    $( "#sortable" ).disableSelection();    
+    var trocas = 0;
 
     $('#sortable>li>span').each(function(x,y){ 
         $(y).html( Math.floor(Math.random()*100)-50 ).hide();
@@ -33,6 +30,7 @@
         var tmp = appearing[0].html();
         appearing[0].html( appearing[1].html() );
         appearing[1].html( tmp );
+        trocas ++;
     })
 
 
@@ -51,9 +49,9 @@
         }
 
         if ( isSorted ) {
-            alert("Ordenado!")
+            alert("Ordenado em " + trocas + " trocas!")
         } else {
-            alert("Não ordenado");
+            alert("Não ordenado! Continue tentando.");
         }
 
 
